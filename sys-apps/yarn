@@ -1,1 +1,2 @@
-: pkg yarn yarn2nix
+pkg yarn
+pkg yarn2nix

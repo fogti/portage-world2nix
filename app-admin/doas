@@ -1,17 +1,14 @@
-: module separate
+module
 # see also: https://github.com/fufexan/nixos-config/blob/5be12112212e061b077eff590addda53b0e74f5f/modules/configuration.nix#L80
-
-{ ... }: {
-  # allow users in group `wheel` to use doas without prompting for password
-  security.doas = {
-    enable = true;
-    # keep environment when running as root
-    extraRules = [{
-      groups = [ "wheel" ];
-      keepEnv = true;
-      noPass = true;
-    }];
-  };
-  # disable sudo
-  security.sudo.enable = false;
-}
+> # allow users in group `wheel` to use doas without prompting for password
+> security.doas = {
+>   enable = true;
+>   # keep environment when running as root
+>   extraRules = [{
+>     groups = [ "wheel" ];
+>     keepEnv = true;
+>     noPass = true;
+>   }];
+> };
+> # disable sudo
+> security.sudo.enable = false;

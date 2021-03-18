@@ -1,2 +1,2 @@
-: pkg
-: warn msg use override to specify use flags
+pkg
+warn msg use override to specify use flags

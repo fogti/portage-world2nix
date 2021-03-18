@@ -1,2 +1,2 @@
-: pkg ghostscriptX
-: warn msg this package is maybe unnecessary
+pkg ghostscriptX
+warn msg this package is maybe unnecessary

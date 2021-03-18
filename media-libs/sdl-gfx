@@ -1,2 +1,2 @@
-: skip
-: pkg SDL_gfx
+skip
+pkg SDL_gfx

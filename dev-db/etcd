@@ -1,1 +1,1 @@
-: module manual services.etcd
+module manual services.etcd

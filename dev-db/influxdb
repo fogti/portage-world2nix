@@ -1,1 +1,1 @@
-: module manual services.influxdb
+module manual services.influxdb

@@ -1,1 +1,2 @@
-: pkg dnsutils host
+pkg dnsutils
+pkg host

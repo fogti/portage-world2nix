@@ -1,2 +1,2 @@
-: module
+module
 > services.acpid.enable = true;

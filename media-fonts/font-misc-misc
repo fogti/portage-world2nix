@@ -1,2 +1,2 @@
-: skip
-: pkg xorg.fontmiscmisc
+skip
+pkg xorg.fontmiscmisc

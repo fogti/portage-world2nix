@@ -1,2 +1,2 @@
-: pkg ocamlPackages.graphics
-: warn msg it might be necessary to install additional ocaml stuff
+pkg ocamlPackages.graphics
+warn msg it might be necessary to install additional ocaml stuff

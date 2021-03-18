@@ -1,2 +1,1 @@
-: pkg
-: overlay github:zseri/crulz
+pkg _ overlay github:zseri/crulz
