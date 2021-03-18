@@ -1,2 +1,2 @@
 : pkg
-: PR NixOS/nixpkgs#116469 github:zseri/nixpkgs/rpm2targz
+: unstable
