@@ -39,7 +39,7 @@ class PkgState:
     def append(self, atom):
         p = self.lookup(atom)
         if not p:
-            print(f'{atom}: {Fore.RED}unknown{Style.RESET_ALL}')
+            print(f'{atom}:\t{Fore.RED}unknown{Style.RESET_ALL}')
             return
         p, pkgname = p
 
@@ -53,17 +53,17 @@ class PkgState:
                 elif lp[0] == 'skip':
                     return
                 elif lp[0] == 'force-manual':
-                    print(f'{atom}: {Fore.BLUE}force-manual{x}{Style.RESET_ALL}')
+                    print(f'{atom}:\t{Fore.BLUE}force-manual{x}{Style.RESET_ALL}')
                     return
                 elif lp[0] == 'unavailable':
-                    print(f'{atom}: {Fore.RED}unavailable{x}{Style.RESET_ALL}')
+                    print(f'{atom}:\t{Fore.RED}unavailable{x}{Style.RESET_ALL}')
                     return
                 elif lp[0] == 'warn':
                     if lp[1] == 'pkg':
                         self.warn_pkgs.append(lp[2])
                     elif lp[1] == 'msg':
                         x = ' '.join(lp[2:])
-                        print(f'{atom}: {Fore.YELLOW}{x}{Style.RESET_ALL}')
+                        print(f'{atom}:\t{Fore.YELLOW}{x}{Style.RESET_ALL}')
                 elif lp[0] == 'pkg':
                     rpn = lp[1] if (len(lp) > 1 and lp[1] != '_') else pkgname
                     self.pkgs.append(rpn)
@@ -77,18 +77,18 @@ class PkgState:
                             overlay = lp[3]
                         else:
                             x = ' '.join(lp[2:])
-                            print(f'{atom}: {Fore.RED}unknown package source spec{Style.RESET_ALL}: {x}')
+                            print(f'{atom}:\t{Fore.RED}unknown package source spec{Style.RESET_ALL}: {x}')
                             return
                         self.from_overlays[rpn] = overlay
                 elif lp[0] == 'module':
                     if len(lp) > 1:
                         if lp[1] == 'manual':
                             x = ' '.join(lp[2:])
-                            print(f'{atom}: {Fore.BLUE}manual service module: {x}{Style.RESET_ALL}')
+                            print(f'{atom}:\t{Fore.BLUE}manual service module: {x}{Style.RESET_ALL}')
                 elif lp[0] == '>':
                     self.confls.append(' '.join(lp[1:]))
                 else:
-                    print(f'{atom}: {Fore.RED}unknown directive{Style.RESET_ALL}: {l}')
+                    print(f'{atom}:\t{Fore.RED}unknown directive{Style.RESET_ALL}: {l}')
 
 pkgst = PkgState(os.path.realpath(sys.path[0]))
 
